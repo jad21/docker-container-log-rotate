@@ -20,8 +20,8 @@ mount log files output by the dokcer container on the host, and rotate the log f
 # vi /etc/logrotate.d/nginx.logrotate
 # cat /etc/logrotate.d/nginx.logrotate
 /var/log/nginx/*log {
-    daily
-    rotate 30
+    size 1000M
+    rotate 5
     missingok
     notifempty
     sharedscripts
